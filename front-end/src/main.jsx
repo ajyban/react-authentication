@@ -7,6 +7,7 @@ import App from "./App.jsx";
 import Login from "./components/Login.jsx";
 import CreateAcccount from "./components/CreateAccount.jsx";
 import UserProfile from "./components/UserProfile.jsx";
+import AuthRoute from "./components/AuthRoute.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -15,7 +16,14 @@ createRoot(document.getElementById("root")).render(
         <Route path="/" element={<App />}>
           <Route path="login" element={<Login />} />
           <Route path="create-account" element={<CreateAcccount />} />
-          <Route path="profile" element={<UserProfile />} />
+          <Route
+            path="profile"
+            element={
+              <AuthRoute>
+                <UserProfile />
+              </AuthRoute>
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>

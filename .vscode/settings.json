@@ -1,5 +1,5 @@
 {
   "editor.tabSize": 2,
-  "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single"
+  "javascript.preferences.quoteStyle": "double",
+  "editor.formatOnSave": true
 }
