@@ -1,9 +1,11 @@
 import { useState } from "react";
 import CenteredForm from "./CenteredForm";
+import { useNavigate } from "react-router";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   return (
     <CenteredForm>
@@ -45,7 +47,11 @@ export default function Login() {
             <button type="submit" className="btn btn-primary">
               Login
             </button>
-            <button type="submit" className="btn btn-secondary  ms-1">
+            <button
+              type="submit"
+              className="btn btn-secondary  ms-1"
+              onClick={() => navigate("/create-account")}
+            >
               Sign Up
             </button>
           </div>
