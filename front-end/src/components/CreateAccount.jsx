@@ -9,58 +9,50 @@ export default function CreateAcccount() {
   return (
     <CenteredForm>
       <form>
-        <div className="row">
-          <div className="col-md-6 offset-md-3">
-            <div className="row mb-3">
-              <label htmlFor="email" className="col-sm-2 col-form-label">
-                Email
-              </label>
-              <div className="col-sm-10">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-            </div>
-            <div className="row mb-3">
-              <label htmlFor="password" className="col-sm-2 col-form-label">
-                Password
-              </label>
-              <div className="col-sm-10">
-                <input
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </div>
-            </div>
-            <div className="row mb-3">
-              <label
-                htmlFor="confirmPassword"
-                className="col-sm-2 col-form-label"
-              >
-                Confirm Password
-              </label>
-              <div className="col-sm-10">
-                <input
-                  type="password"
-                  className="form-control"
-                  id="confirmPassword"
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                />
-              </div>
-            </div>
+        <form className="form">
+          <div className="ubuntu-light form-field">
+            <label htmlFor="email">Email</label>
+            <input
+              className="ubuntu-light"
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Create Account
-        </button>
+
+          <div className="ubuntu-light form-field">
+            <label htmlFor="password">Password</label>
+            <input
+              className="ubuntu-light"
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+
+          <div className="ubuntu-light form-field">
+            <label htmlFor="confirmPassword">Confirm Password</label>
+            <input
+              className="ubuntu-light"
+              type="password"
+              id="confirmPassword"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </div>
+
+          <div className="button-group">
+            <button
+              className="ubuntu-light"
+              type="submit"
+              onClick={() => navigate("/create-account")}
+            >
+              Sign Up
+            </button>
+          </div>
+        </form>
       </form>
     </CenteredForm>
   );

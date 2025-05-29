@@ -1,20 +1,22 @@
 import { Link, Outlet } from "react-router";
+import "./Layout.css";
 
 export default function Layout() {
   return (
     <>
-      <nav className="navbar bg-black text-white">
-        <div className="container-fluid">
-          <Link to="/" className="nav-link text-white fw-bold">
-            React Authentication App
+      <nav className="nav-bar">
+        <div>
+          <Link className="nav-bar-title ubuntu-bold" to="/">
+            React Authentication Demo App
           </Link>
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link text-white" to="/login">
-                Login
-              </Link>
-            </li>
-          </ul>
+        </div>
+        <div>
+          <Link className="nav-bar-item ubuntu-regular" to="/login">
+            Login
+          </Link>
+          <Link className="nav-bar-item ubuntu-regular" to="/profile">
+            Profile
+          </Link>
         </div>
       </nav>
       <Outlet />
