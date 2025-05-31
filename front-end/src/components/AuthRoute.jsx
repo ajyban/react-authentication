@@ -1,7 +1,7 @@
-import { Navigate } from "react-router";
+import { Navigate } from 'react-router';
+import { useUser } from './user-profile/useUser';
 
 export default function AuthRoute({ children }) {
-  const isAuthenticated = false;
-
-  return isAuthenticated ? children : <Navigate to="/login" />;
+  const { user } = useUser();
+  return user ? children : <Navigate to='/login' />;
 }
